@@ -8,9 +8,6 @@ These repos are published under **mbabari** as public repositories. If you fork 
 
 1. **Do not** commit `.env`, `.env.local`, or any Aura passwords. Use `.env.example` patterns only in documentation.
 
-The public **commercial-bank-graph-demo** tree intentionally omits a `presentation/` folder (slides and long-form workshop scripts are kept out of this repo).
-
-Long-form ER positioning documents (`explore/entity_resolution.md`, `explore/er_customer360.md`, `explore/er_industry_agnostic.md`) are also omitted from this repo; Explore setup and walkthrough remain in `explore/bloom_setup.md` and `explore/explore_story.md`.
 
 ## Data loader (`neo4j-mcp-server/load_demo.mjs`)
 
