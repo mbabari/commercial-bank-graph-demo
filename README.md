@@ -2,7 +2,7 @@
 
 A complete demo environment for the **Commercial Graph** Proof of Value, demonstrating how Neo4j property graphs solve commercial ecosystem analysis, unbanked client identification, entity resolution, payment behaviour insights, and credit decisioning.
 
-> **Dashboard**: A full Next.js dashboard is available at [YOUR_GITHUB_ORG/commercial-bank-graph-dashboard](https://github.com/YOUR_GITHUB_ORG/commercial-bank-graph-dashboard) — live at [commercial-graph-dashboard.vercel.app](https://commercial-graph-dashboard.vercel.app)
+> **Dashboard**: A full Next.js dashboard is available at [mbabari/commercial-bank-graph-dashboard](https://github.com/mbabari/commercial-bank-graph-dashboard) — live at [commercial-graph-dashboard.vercel.app](https://commercial-graph-dashboard.vercel.app)
 
 ## Graph After Data Ingestion
 

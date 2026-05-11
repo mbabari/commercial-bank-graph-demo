@@ -2,17 +2,13 @@
 
 This tree is a **sanitised** copy of the Commercial Bank Graph demo: synthetic data only, no institution-specific names, and **no credentials** in the repository.
 
-## Before you push to GitHub
+## Repositories on GitHub
 
-1. **Create two new public repositories** (suggested names):
-   - `commercial-bank-graph-demo` — this repo (Cypher, CSVs, docs)
-   - `commercial-bank-graph-dashboard` — the Next.js app (sibling folder)
+These repos are published under **mbabari** as public repositories. If you fork them, update clone and raw URLs in `README.md` and workshop docs to match your fork.
 
-2. **Search-and-replace** the placeholder `YOUR_GITHUB_ORG` in `README.md`, `presentation/*.md`, and `explore/*.md` with your GitHub user or organisation name.
+1. **Do not** commit `.env`, `.env.local`, or any Aura passwords. Use `.env.example` patterns only in documentation.
 
-3. **Do not** commit `.env`, `.env.local`, or any Aura passwords. Use `.env.example` patterns only in documentation.
-
-4. **Optional:** Remove the `presentation/` folder if you only want to ship data + Cypher + explore guides.
+2. **Optional:** Remove the `presentation/` folder if you only want to ship data + Cypher + explore guides.
 
 ## Data loader (`neo4j-mcp-server/load_demo.mjs`)
 

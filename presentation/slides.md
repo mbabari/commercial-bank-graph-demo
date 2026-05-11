@@ -333,6 +333,6 @@ We demonstrated that **Neo4j answers all six PoV questions** — in real time, w
 
 - **Dashboard:** http://localhost:3000
 - **Neo4j Aura:** https://console.neo4j.io
-- **Repository:** github.com/YOUR_GITHUB_ORG/commercial-bank-graph-demo
+- **Repository:** github.com/mbabari/commercial-bank-graph-demo
 
 *Questions?*
