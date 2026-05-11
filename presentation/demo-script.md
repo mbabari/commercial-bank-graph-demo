@@ -191,7 +191,7 @@ Point out the individual signal columns: `nameSimilarity`, `sameIndustry`, `same
 
 Return to **slides** — Summary slide and Next Steps.
 
-> "We've shown that a single graph model answers all six PoV questions — payment behaviour, unbanked identification, entity resolution, ecosystem mapping, cross-sell, and credit scoring. Every query runs in real time. The dashboard is live. And Neo4j Explore lets any business user navigate the graph without writing code."
+> "We've shown that a single graph model answers all six questions — payment behaviour, unbanked identification, entity resolution, ecosystem mapping, cross-sell, and credit scoring. Every query runs in real time. The dashboard is live. And Neo4j Explore lets any business user navigate the graph without writing code."
 
 > "Entity resolution in particular shows a capability that goes beyond a single institution — graph-enhanced identity matching is a platform capability applicable across FSI, healthcare, and the public sector."
 
