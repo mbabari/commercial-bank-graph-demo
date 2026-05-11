@@ -1,6 +1,6 @@
 # Commercial Graph — Neo4j Aura Demo
 
-A complete demo environment for the **Commercial Graph** Proof of Value, demonstrating how Neo4j property graphs solve commercial ecosystem analysis, unbanked client identification, entity resolution, payment behaviour insights, and credit decisioning.
+A complete demo environment for the **Commercial Bank Graph**, demonstrating how Neo4j property graphs solve commercial ecosystem analysis, unbanked client identification, entity resolution, payment behaviour insights, and credit decisioning.
 
 > **Dashboard**: A full Next.js dashboard is available at [mbabari/commercial-bank-graph-dashboard](https://github.com/mbabari/commercial-bank-graph-dashboard) — live at [commercial-graph-dashboard.vercel.app](https://commercial-graph-dashboard.vercel.app)
 
