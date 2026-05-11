@@ -8,7 +8,7 @@ These repos are published under **mbabari** as public repositories. If you fork 
 
 1. **Do not** commit `.env`, `.env.local`, or any Aura passwords. Use `.env.example` patterns only in documentation.
 
-2. **Optional:** Remove the `presentation/` folder if you only want to ship data + Cypher + explore guides.
+The public **commercial-bank-graph-demo** tree intentionally omits a `presentation/` folder (slides and long-form workshop scripts are kept out of this repo).
 
 ## Data loader (`neo4j-mcp-server/load_demo.mjs`)
 
