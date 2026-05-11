@@ -1,0 +1,15 @@
+productId,name,pillar,monthlyFee
+P001,Business Overdraft,lend,250.0
+P002,Term Loan,lend,0.0
+P003,Asset Finance,lend,150.0
+P004,Trade Finance Facility,lend,500.0
+P005,Business Cheque Account,transact,199.0
+P006,Business Savings Account,transact,0.0
+P007,Merchant POS Terminal,transact,350.0
+P008,Commercial Pay,transact,75.0
+P009,Fixed Deposit,invest,0.0
+P010,Money Market Account,invest,0.0
+P011,Unit Trust Portfolio,invest,100.0
+P012,Commercial Property Insurance,insure,450.0
+P013,Business Liability Insurance,insure,320.0
+P014,Fleet Insurance,insure,600.0

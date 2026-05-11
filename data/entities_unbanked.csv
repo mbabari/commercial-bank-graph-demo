@@ -1,0 +1,301 @@
+customerId,name,registrationNumber,region,segment,status,turnover,riskScore,sicCode
+UNB-00001,Bryanston Agriculture (Pty) Ltd,,Mpumalanga,,unbanked,,,4923
+UNB-00002,Sunrise Group Pty Ltd,,Gauteng,,unbanked,,,6110
+UNB-00003,Hermanus Textiles SA,,Mpumalanga,,unbanked,,,7120
+UNB-00004,Paarl Transport (Pty)Ltd,,North West,,unbanked,,,5610
+UNB-00005,Sunrise Capital (Pty) Ltd,,Northern Cape,,unbanked,,,6411
+UNB-00006,Drakensberg Pharma Pty Ltd,,Eastern Cape,,unbanked,,,1512
+UNB-00007,Upington Mining SA,,Limpopo,,unbanked,,,6810
+UNB-00008,Ubuntu Mining (Pty)Ltd,,Western Cape,,unbanked,,,6110
+UNB-00009,Mossel Bay Exports (Pty) Ltd,,Northern Cape,,unbanked,,,4923
+UNB-00010,Bushveld Solutions Pty Ltd,,KwaZulu-Natal,,unbanked,,,2710
+UNB-00011,Thaba Transport SA,,KwaZulu-Natal,,unbanked,,,5610
+UNB-00012,Table Mountain Group (Pty)Ltd,,North West,,unbanked,,,6110
+UNB-00013,Nelspruit Construction (Pty) Ltd,,Eastern Cape,,unbanked,,,7120
+UNB-00014,Sunrise Motors Pty Ltd,,KwaZulu-Natal,,unbanked,,,2310
+UNB-00015,Midrand Transport SA,,Western Cape,,unbanked,,,2520
+UNB-00016,Umhlanga Holdings Pty Ltd,,Western Cape,,unbanked,,,4711
+UNB-00017,Knysna Svcs,,Northern Cape,,unbanked,,,6201
+UNB-00018,Sandton Manufacturing Pty Ltd,,North West,,unbanked,,,1110
+UNB-00019,Springbok Technology,,Free State,,unbanked,,,5610
+UNB-00020,Drakensberg Consult,,Northern Cape,,unbanked,,,6110
+UNB-00021,Hermanus Energy (Pty) Ltd,,Gauteng,,unbanked,,,1512
+UNB-00022,Bryanston Financial Services,,Northern Cape,,unbanked,,,2520
+UNB-00023,Azania Technology,,Eastern Cape,,unbanked,,,6420
+UNB-00024,Rustenburg Construction SA,,Gauteng,,unbanked,,,2710
+UNB-00025,Nelspruit Properties (Pty) Ltd,,KwaZulu-Natal,,unbanked,,,7120
+UNB-00026,Umhlanga Eng,,Western Cape,,unbanked,,,4711
+UNB-00027,Reef Motors (Pty) Ltd,,Northern Cape,,unbanked,,,1110
+UNB-00028,Protea Manufacturing (Pty) Ltd,,Limpopo,,unbanked,,,8610
+UNB-00029,Centurion Group SA,,Mpumalanga,,unbanked,,,9700
+UNB-00030,Umhlanga Service Co,,KwaZulu-Natal,,unbanked,,,4520
+UNB-00031,Fourways Construction SA,,Western Cape,,unbanked,,,1512
+UNB-00032,Bedfordview Logistics Solutions,,Limpopo,,unbanked,,,6411
+UNB-00033,Sunrise Consultants,,Mpumalanga,,unbanked,,,4520
+UNB-00034,Kempton Mining SA,,Mpumalanga,,unbanked,,,6110
+UNB-00035,Bloemfontein Construction SA,,KwaZulu-Natal,,unbanked,,,6420
+UNB-00036,Highveld Props,,Western Cape,,unbanked,,,5510
+UNB-00037,Berea Enterprise,,KwaZulu-Natal,,unbanked,,,7120
+UNB-00038,East London Chem,,Western Cape,,unbanked,,,6420
+UNB-00039,Mahikeng Pharma Pty Ltd,,KwaZulu-Natal,,unbanked,,,1512
+UNB-00040,East London Eng.,,Limpopo,,unbanked,,,2710
+UNB-00041,Fourways Enterprises,,North West,,unbanked,,,6420
+UNB-00042,Knysna Textiles,,Free State,,unbanked,,,4923
+UNB-00043,Port Elizabeth Agriculture,,Limpopo,,unbanked,,,6201
+UNB-00044,Fourways Chemicals,,Western Cape,,unbanked,,,7111
+UNB-00045,Sunrise Foods,,Limpopo,,unbanked,,,6110
+UNB-00046,Menlyn Energy,,North West,,unbanked,,,9700
+UNB-00047,Waterberg Transport,,KwaZulu-Natal,,unbanked,,,4711
+UNB-00048,Valley Mining,,KwaZulu-Natal,,unbanked,,,4100
+UNB-00049,Fourways Steel,,Western Cape,,unbanked,,,4711
+UNB-00050,Centurion Freight,,Western Cape,,unbanked,,,6810
+UNB-00051,Kimberley Energy,,North West,,unbanked,,,4520
+UNB-00052,East London Agriculture,,Limpopo,,unbanked,,,1110
+UNB-00053,Franschhoek Logistics,,KwaZulu-Natal,,unbanked,,,1512
+UNB-00054,Golden Holdings,,KwaZulu-Natal,,unbanked,,,7111
+UNB-00055,Rivonia Steel,,Gauteng,,unbanked,,,5510
+UNB-00056,Highveld Manufacturing,,North West,,unbanked,,,9700
+UNB-00057,Stellenbosch Capital,,North West,,unbanked,,,4100
+UNB-00058,Lowveld Imports,,KwaZulu-Natal,,unbanked,,,9700
+UNB-00059,Mahikeng Foods,,Free State,,unbanked,,,4100
+UNB-00060,Kimberley Solutions,,North West,,unbanked,,,9700
+UNB-00061,Sunrise Enterprises,,Limpopo,,unbanked,,,2710
+UNB-00062,Bushveld Trading,,Eastern Cape,,unbanked,,,7111
+UNB-00063,Franschhoek Pharma,,Limpopo,,unbanked,,,2710
+UNB-00064,Bloemfontein Engineering,,KwaZulu-Natal,,unbanked,,,6810
+UNB-00065,Springbok Finance,,Northern Cape,,unbanked,,,7111
+UNB-00066,Drakensberg Construction,,North West,,unbanked,,,2710
+UNB-00067,Bloemfontein Retail,,Gauteng,,unbanked,,,6411
+UNB-00068,Fourways Capital,,Gauteng,,unbanked,,,7111
+UNB-00069,Kempton Properties,,North West,,unbanked,,,6201
+UNB-00070,Menlyn Chemicals,,Western Cape,,unbanked,,,6411
+UNB-00071,Waterberg Holdings,,North West,,unbanked,,,4711
+UNB-00072,Bloemfontein Finance,,Northern Cape,,unbanked,,,6411
+UNB-00073,Azania Motors,,Gauteng,,unbanked,,,8610
+UNB-00074,Knysna Engineering,,Northern Cape,,unbanked,,,1110
+UNB-00075,Bryanston Textiles,,Eastern Cape,,unbanked,,,5610
+UNB-00076,Bedfordview Services,,Western Cape,,unbanked,,,2710
+UNB-00077,East London Holdings,,Free State,,unbanked,,,7120
+UNB-00078,Kempton Chemicals,,Mpumalanga,,unbanked,,,9700
+UNB-00079,Berea Pharma,,Limpopo,,unbanked,,,4520
+UNB-00080,Bedfordview Retail,,Northern Cape,,unbanked,,,6810
+UNB-00081,Cape Services,,Northern Cape,,unbanked,,,7120
+UNB-00082,Stellenbosch Holdings,,Free State,,unbanked,,,8610
+UNB-00083,Menlyn Exports,,Limpopo,,unbanked,,,2710
+UNB-00084,Mahikeng Engineering,,Eastern Cape,,unbanked,,,6420
+UNB-00085,Upington Agriculture,,Western Cape,,unbanked,,,4520
+UNB-00086,Franschhoek Enterprises,,Mpumalanga,,unbanked,,,7120
+UNB-00087,Polokwane Motors,,Gauteng,,unbanked,,,4100
+UNB-00088,Highveld Group,,KwaZulu-Natal,,unbanked,,,6810
+UNB-00089,Bloemfontein Technologies,,Western Cape,,unbanked,,,2310
+UNB-00090,Bryanston Consulting,,Limpopo,,unbanked,,,9700
+UNB-00091,Rustenburg Foods,,Free State,,unbanked,,,9700
+UNB-00092,Table Mountain Exports,,KwaZulu-Natal,,unbanked,,,6810
+UNB-00093,Umhlanga Trading,,Eastern Cape,,unbanked,,,7111
+UNB-00094,Springbok Imports,,Northern Cape,,unbanked,,,7111
+UNB-00095,Upington Properties,,KwaZulu-Natal,,unbanked,,,1512
+UNB-00096,Fourways Properties,,Gauteng,,unbanked,,,4100
+UNB-00097,Reef Foods,,Gauteng,,unbanked,,,2310
+UNB-00098,Highveld Retail,,Free State,,unbanked,,,7120
+UNB-00099,East London Services,,Mpumalanga,,unbanked,,,4923
+UNB-00100,Cape Technologies,,Northern Cape,,unbanked,,,2520
+UNB-00101,Mossel Bay Construction,,Northern Cape,,unbanked,,,5510
+UNB-00102,Franschhoek Holdings,,Northern Cape,,unbanked,,,8610
+UNB-00103,Port Elizabeth Energy,,Eastern Cape,,unbanked,,,5610
+UNB-00104,Ballito Pharma,,North West,,unbanked,,,8610
+UNB-00105,Protea Energy,,Western Cape,,unbanked,,,4923
+UNB-00106,Nelspruit Imports,,Eastern Cape,,unbanked,,,4711
+UNB-00107,Menlyn Foods,,Northern Cape,,unbanked,,,1110
+UNB-00108,Upington Group,,Free State,,unbanked,,,4711
+UNB-00109,Rivonia Pharma,,Mpumalanga,,unbanked,,,2310
+UNB-00110,Mossel Bay Consulting,,KwaZulu-Natal,,unbanked,,,6810
+UNB-00111,Midrand Services,,Eastern Cape,,unbanked,,,8610
+UNB-00112,Berea Agriculture,,Eastern Cape,,unbanked,,,6810
+UNB-00113,Reef Properties,,Eastern Cape,,unbanked,,,4923
+UNB-00114,Valley Properties,,Eastern Cape,,unbanked,,,4711
+UNB-00115,Polokwane Services,,KwaZulu-Natal,,unbanked,,,2520
+UNB-00116,Highveld Pharma,,North West,,unbanked,,,9700
+UNB-00117,Hermanus Logistics,,North West,,unbanked,,,6110
+UNB-00118,Polokwane Solutions,,North West,,unbanked,,,8610
+UNB-00119,Berea Energy,,KwaZulu-Natal,,unbanked,,,7111
+UNB-00120,Sunrise Exports,,KwaZulu-Natal,,unbanked,,,1512
+UNB-00121,Knysna Imports,,Limpopo,,unbanked,,,6810
+UNB-00122,Rivonia Capital,,KwaZulu-Natal,,unbanked,,,6420
+UNB-00123,Drakensberg Motors,,Northern Cape,,unbanked,,,6420
+UNB-00124,Midrand Motors,,Gauteng,,unbanked,,,1110
+UNB-00125,Kimberley Manufacturing,,Limpopo,,unbanked,,,8610
+UNB-00126,Thaba Agriculture,,Northern Cape,,unbanked,,,4923
+UNB-00127,Stellenbosch Steel,,Mpumalanga,,unbanked,,,6110
+UNB-00128,Cape Energy,,Limpopo,,unbanked,,,4520
+UNB-00129,Bedfordview Motors,,Mpumalanga,,unbanked,,,6110
+UNB-00130,Rivonia Holdings,,North West,,unbanked,,,4100
+UNB-00131,Port Elizabeth Mining,,Eastern Cape,,unbanked,,,2520
+UNB-00132,Kempton Capital,,Limpopo,,unbanked,,,4520
+UNB-00133,Lowveld Energy,,Gauteng,,unbanked,,,4100
+UNB-00134,Waterberg Finance,,Northern Cape,,unbanked,,,7120
+UNB-00135,Midrand Imports,,North West,,unbanked,,,5510
+UNB-00136,Rivonia Engineering,,KwaZulu-Natal,,unbanked,,,1512
+UNB-00137,Valley Group,,Free State,,unbanked,,,6810
+UNB-00138,Umhlanga Freight,,Mpumalanga,,unbanked,,,4923
+UNB-00139,Fourways Services,,Northern Cape,,unbanked,,,7120
+UNB-00140,Thaba Services,,Gauteng,,unbanked,,,6411
+UNB-00141,Drakensberg Services,,Eastern Cape,,unbanked,,,8610
+UNB-00142,Port Elizabeth Textiles,,Northern Cape,,unbanked,,,4100
+UNB-00143,Sandton Services,,Mpumalanga,,unbanked,,,7111
+UNB-00144,Paarl Exports,,North West,,unbanked,,,2310
+UNB-00145,Bryanston Steel,,Free State,,unbanked,,,6420
+UNB-00146,Nelspruit Mining,,KwaZulu-Natal,,unbanked,,,5610
+UNB-00147,Bedfordview Textiles,,Limpopo,,unbanked,,,2310
+UNB-00148,Highveld Agriculture,,Mpumalanga,,unbanked,,,4711
+UNB-00149,Midrand Solutions,,Free State,,unbanked,,,4923
+UNB-00150,Umhlanga Exports,,Mpumalanga,,unbanked,,,8610
+UNB-00151,Bedfordview Agriculture,,KwaZulu-Natal,,unbanked,,,1110
+UNB-00152,Waterberg Freight,,Eastern Cape,,unbanked,,,4923
+UNB-00153,Upington Freight,,Western Cape,,unbanked,,,4520
+UNB-00154,Golden Enterprises,,Western Cape,,unbanked,,,2520
+UNB-00155,Karoo Consulting,,North West,,unbanked,,,7120
+UNB-00156,Thaba Steel,,KwaZulu-Natal,,unbanked,,,2310
+UNB-00157,Bryanston Investments,,Eastern Cape,,unbanked,,,4711
+UNB-00158,Golden Trading,,Gauteng,,unbanked,,,6110
+UNB-00159,Midrand Capital,,North West,,unbanked,,,6420
+UNB-00160,Hermanus Consulting,,Free State,,unbanked,,,7120
+UNB-00161,Umhlanga Mining,,Northern Cape,,unbanked,,,4100
+UNB-00162,Nelspruit Finance,,Limpopo,,unbanked,,,7111
+UNB-00163,Hermanus Properties,,Western Cape,,unbanked,,,6420
+UNB-00164,Rosebank Services,,Limpopo,,unbanked,,,4923
+UNB-00165,Knysna Group,,KwaZulu-Natal,,unbanked,,,6110
+UNB-00166,Sandton Energy,,Northern Cape,,unbanked,,,1110
+UNB-00167,Upington Consulting,,North West,,unbanked,,,6810
+UNB-00168,Rosebank Trading,,Limpopo,,unbanked,,,5510
+UNB-00169,Bloemfontein Properties,,Gauteng,,unbanked,,,7120
+UNB-00170,Fourways Manufacturing,,Limpopo,,unbanked,,,7120
+UNB-00171,Kempton Enterprises,,Eastern Cape,,unbanked,,,4100
+UNB-00172,Rustenburg Enterprises,,Limpopo,,unbanked,,,4711
+UNB-00173,Thaba Construction,,Limpopo,,unbanked,,,4711
+UNB-00174,Knysna Exports,,Free State,,unbanked,,,5510
+UNB-00175,Rustenburg Freight,,Northern Cape,,unbanked,,,4923
+UNB-00176,Bedfordview Manufacturing,,Western Cape,,unbanked,,,4100
+UNB-00177,Drakensberg Textiles,,North West,,unbanked,,,9700
+UNB-00178,Lowveld Logistics,,Northern Cape,,unbanked,,,1110
+UNB-00179,Sandton Holdings,,KwaZulu-Natal,,unbanked,,,6420
+UNB-00180,Azania Properties,,Western Cape,,unbanked,,,2710
+UNB-00181,Bedfordview Investments,,North West,,unbanked,,,6110
+UNB-00182,Springbok Solutions,,Western Cape,,unbanked,,,2710
+UNB-00183,Bryanston Group,,Gauteng,,unbanked,,,2520
+UNB-00184,Ubuntu Enterprises,,North West,,unbanked,,,4711
+UNB-00185,Ballito Freight,,Western Cape,,unbanked,,,7111
+UNB-00186,Mahikeng Manufacturing,,North West,,unbanked,,,6201
+UNB-00187,Midrand Agriculture,,Gauteng,,unbanked,,,7120
+UNB-00188,Thaba Energy,,Free State,,unbanked,,,4520
+UNB-00189,Table Mountain Capital,,Eastern Cape,,unbanked,,,2520
+UNB-00190,Ubuntu Textiles,,Limpopo,,unbanked,,,5610
+UNB-00191,Azania Agriculture,,Free State,,unbanked,,,8610
+UNB-00192,Ubuntu Trading,,Gauteng,,unbanked,,,8610
+UNB-00193,Upington Energy,,KwaZulu-Natal,,unbanked,,,6110
+UNB-00194,Golden Energy,,Western Cape,,unbanked,,,9700
+UNB-00195,Nelspruit Logistics,,Gauteng,,unbanked,,,6110
+UNB-00196,Rustenburg Mining,,Northern Cape,,unbanked,,,2520
+UNB-00197,Sunrise Solutions,,Northern Cape,,unbanked,,,6110
+UNB-00198,Reef Trading,,Limpopo,,unbanked,,,6110
+UNB-00199,Springbok Energy,,North West,,unbanked,,,7120
+UNB-00200,Sandton Retail,,North West,,unbanked,,,4520
+UNB-00201,Hermanus Services,,Mpumalanga,,unbanked,,,6420
+UNB-00202,Berea Capital,,Northern Cape,,unbanked,,,4100
+UNB-00203,Fourways Transport,,Gauteng,,unbanked,,,7111
+UNB-00204,Bryanston Freight,,KwaZulu-Natal,,unbanked,,,1110
+UNB-00205,Hermanus Group,,Limpopo,,unbanked,,,4520
+UNB-00206,Knysna Pharma,,North West,,unbanked,,,7120
+UNB-00207,Lowveld Steel,,Free State,,unbanked,,,5610
+UNB-00208,Midrand Engineering,,Western Cape,,unbanked,,,7111
+UNB-00209,Mahikeng Construction,,Gauteng,,unbanked,,,2710
+UNB-00210,Cape Capital,,Gauteng,,unbanked,,,4520
+UNB-00211,Bushveld Energy,,Eastern Cape,,unbanked,,,2520
+UNB-00212,Springbok Chemicals,,Limpopo,,unbanked,,,6810
+UNB-00213,Thaba Logistics,,Mpumalanga,,unbanked,,,4711
+UNB-00214,Bloemfontein Motors,,Western Cape,,unbanked,,,1110
+UNB-00215,Fourways Retail,,Limpopo,,unbanked,,,6110
+UNB-00216,Polokwane Holdings,,Northern Cape,,unbanked,,,1512
+UNB-00217,Rosebank Construction,,Eastern Cape,,unbanked,,,7111
+UNB-00218,Bushveld Engineering,,Eastern Cape,,unbanked,,,7120
+UNB-00219,Bryanston Manufacturing,,Eastern Cape,,unbanked,,,7111
+UNB-00220,Mahikeng Properties,,KwaZulu-Natal,,unbanked,,,7120
+UNB-00221,Mossel Bay Technologies,,Western Cape,,unbanked,,,8610
+UNB-00222,Menlyn Pharma,,North West,,unbanked,,,6411
+UNB-00223,Bushveld Agriculture,,KwaZulu-Natal,,unbanked,,,7120
+UNB-00224,Bloemfontein Transport,,Mpumalanga,,unbanked,,,5610
+UNB-00225,Mossel Bay Solutions,,Mpumalanga,,unbanked,,,6411
+UNB-00226,Nelspruit Technologies,,Mpumalanga,,unbanked,,,9700
+UNB-00227,Hermanus Manufacturing,,Limpopo,,unbanked,,,7120
+UNB-00228,Bloemfontein Trading,,Northern Cape,,unbanked,,,2710
+UNB-00229,Valley Capital,,Mpumalanga,,unbanked,,,1110
+UNB-00230,Berea Consulting,,Northern Cape,,unbanked,,,7111
+UNB-00231,Ballito Services,,KwaZulu-Natal,,unbanked,,,2710
+UNB-00232,Sunrise Holdings,,Free State,,unbanked,,,2310
+UNB-00233,Port Elizabeth Consulting,,Eastern Cape,,unbanked,,,2310
+UNB-00234,Stellenbosch Agriculture,,North West,,unbanked,,,8610
+UNB-00235,Springbok Freight,,Limpopo,,unbanked,,,2310
+UNB-00236,Kempton Technologies,,Western Cape,,unbanked,,,4711
+UNB-00237,Bloemfontein Consulting,,Gauteng,,unbanked,,,6201
+UNB-00238,Midrand Retail,,KwaZulu-Natal,,unbanked,,,5610
+UNB-00239,Bloemfontein Chemicals,,Northern Cape,,unbanked,,,2310
+UNB-00240,Sandton Imports,,Limpopo,,unbanked,,,2710
+UNB-00241,Waterberg Solutions,,Western Cape,,unbanked,,,6810
+UNB-00242,Table Mountain Retail,,Limpopo,,unbanked,,,4923
+UNB-00243,Highveld Enterprises,,Northern Cape,,unbanked,,,6411
+UNB-00244,Mossel Bay Manufacturing,,North West,,unbanked,,,6201
+UNB-00245,Rustenburg Chemicals,,Eastern Cape,,unbanked,,,7120
+UNB-00246,Knysna Properties,,Eastern Cape,,unbanked,,,2310
+UNB-00247,Kempton Solutions,,Western Cape,,unbanked,,,2520
+UNB-00248,Menlyn Manufacturing,,Mpumalanga,,unbanked,,,6110
+UNB-00249,Protea Exports,,Free State,,unbanked,,,4100
+UNB-00250,Springbok Consulting,,Eastern Cape,,unbanked,,,4520
+UNB-00251,Kimberley Services,,KwaZulu-Natal,,unbanked,,,2310
+UNB-00252,Drakensberg Freight,,Gauteng,,unbanked,,,4711
+UNB-00253,Polokwane Consulting,,KwaZulu-Natal,,unbanked,,,5510
+UNB-00254,Azania Solutions,,Western Cape,,unbanked,,,5510
+UNB-00255,Umhlanga Energy,,Gauteng,,unbanked,,,5610
+UNB-00256,Valley Freight,,Northern Cape,,unbanked,,,4520
+UNB-00257,Valley Retail,,Northern Cape,,unbanked,,,4923
+UNB-00258,Mossel Bay Energy,,KwaZulu-Natal,,unbanked,,,1110
+UNB-00259,Bryanston Chemicals,,Northern Cape,,unbanked,,,1512
+UNB-00260,Sandton Capital,,Limpopo,,unbanked,,,4711
+UNB-00261,Bryanston Foods,,Western Cape,,unbanked,,,5610
+UNB-00262,Ballito Retail,,Gauteng,,unbanked,,,1512
+UNB-00263,Ubuntu Consulting,,Northern Cape,,unbanked,,,5510
+UNB-00264,Centurion Energy,,Limpopo,,unbanked,,,4100
+UNB-00265,Protea Services,,Mpumalanga,,unbanked,,,6110
+UNB-00266,Table Mountain Textiles,,Free State,,unbanked,,,6201
+UNB-00267,Protea Retail,,Free State,,unbanked,,,4711
+UNB-00268,Lowveld Solutions,,Limpopo,,unbanked,,,2710
+UNB-00269,Highveld Freight,,Limpopo,,unbanked,,,7111
+UNB-00270,Kimberley Steel,,Eastern Cape,,unbanked,,,6411
+UNB-00271,Lowveld Technologies,,Free State,,unbanked,,,9700
+UNB-00272,Centurion Transport,,Northern Cape,,unbanked,,,2710
+UNB-00273,Hermanus Pharma,,Eastern Cape,,unbanked,,,2710
+UNB-00274,Rosebank Motors,,Northern Cape,,unbanked,,,2710
+UNB-00275,Kempton Consulting,,KwaZulu-Natal,,unbanked,,,8610
+UNB-00276,Karoo Retail,,Northern Cape,,unbanked,,,2520
+UNB-00277,Cape Solutions,,KwaZulu-Natal,,unbanked,,,1110
+UNB-00278,Midrand Finance,,Limpopo,,unbanked,,,6411
+UNB-00279,Berea Mining,,Eastern Cape,,unbanked,,,2520
+UNB-00280,Waterberg Agriculture,,Gauteng,,unbanked,,,9700
+UNB-00281,Highveld Motors,,North West,,unbanked,,,2710
+UNB-00282,Franschhoek Capital,,North West,,unbanked,,,6110
+UNB-00283,Bryanston Energy,,North West,,unbanked,,,2710
+UNB-00284,Golden Manufacturing,,Eastern Cape,,unbanked,,,1512
+UNB-00285,Bedfordview Exports,,Gauteng,,unbanked,,,4923
+UNB-00286,Bedfordview Properties,,Eastern Cape,,unbanked,,,4520
+UNB-00287,Umhlanga Capital,,North West,,unbanked,,,5610
+UNB-00288,Ubuntu Technologies,,Limpopo,,unbanked,,,1512
+UNB-00289,Port Elizabeth Steel,,Northern Cape,,unbanked,,,7111
+UNB-00290,Springbok Foods,,Western Cape,,unbanked,,,6420
+UNB-00291,Hermanus Enterprises,,Gauteng,,unbanked,,,7120
+UNB-00292,Reef Investments,,North West,,unbanked,,,6201
+UNB-00293,Rosebank Exports,,Free State,,unbanked,,,6420
+UNB-00294,Golden Technologies,,Free State,,unbanked,,,9700
+UNB-00295,Table Mountain Motors,,Northern Cape,,unbanked,,,2710
+UNB-00296,East London Finance,,Northern Cape,,unbanked,,,2710
+UNB-00297,Ballito Chemicals,,Eastern Cape,,unbanked,,,6420
+UNB-00298,Knysna Motors,,Limpopo,,unbanked,,,7111
+UNB-00299,Polokwane Agriculture,,Limpopo,,unbanked,,,7120
+UNB-00300,Bryanston Logistics,,KwaZulu-Natal,,unbanked,,,5610

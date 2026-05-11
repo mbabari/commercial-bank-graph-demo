@@ -1,0 +1,21 @@
+sicCode,name,sector
+1110,Growing of cereals,Agriculture
+1512,Processing of meat,Manufacturing
+2310,Manufacture of coke oven products,Manufacturing
+2520,Manufacture of plastics,Manufacturing
+2710,Manufacture of basic iron and steel,Manufacturing
+4100,Construction of buildings,Construction
+4520,Maintenance of motor vehicles,Automotive
+4711,Retail sale in non-specialised stores,Retail
+4923,Freight transport by road,Transport
+5510,Hotels and accommodation,Hospitality
+5610,Restaurants and food service,Hospitality
+6110,Wired telecommunications,Telecoms
+6201,Computer programming,Technology
+6411,Central banking,Financial Services
+6420,Activities of holding companies,Financial Services
+6810,Real estate with own property,Real Estate
+7111,Architectural activities,Professional Services
+7120,Technical testing and analysis,Professional Services
+8610,Hospital activities,Healthcare
+9700,Mining of metal ores,Mining
