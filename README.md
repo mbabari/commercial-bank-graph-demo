@@ -79,7 +79,6 @@ All data is synthetic. The unbanked dataset includes 40 planted near-duplicate e
 
 ## Business Questions Answered
 
-These map directly to the user stories in the PoV planning document:
 
 1. **Payment Behaviour** — Frequency, volume, and regularity of client payment flows
 2. **Unbanked Identification** — Non-banked entities receiving significant payment volume (conversion targets)
