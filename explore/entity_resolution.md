@@ -12,6 +12,8 @@ Traditional ER approaches compare **attributes** (name, address, date of birth, 
 
 The graph doesn't just find matches — it provides **structural evidence** for identity.
 
+![High-confidence ER match in Neo4j Explore](screenshot_high_confidenceER.png)
+
 ---
 
 ## Industry Perspectives
