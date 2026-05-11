@@ -14,12 +14,12 @@ This model captures the Commercial Bank ecosystem: banked customers, unbanked en
                    │
               ┌────┴────┐  HAS_ACCOUNT   ┌─────────┐  SENT   ┌─────────────┐
               │ Customer│───────────────▶│ Account │────────▶│ Transaction │
-              └────┬────┘                 └─────────┘        └──────┬──────┘
-                   │                           ▲                    │
-              HOLDS_PRODUCT                    └────────────────────┘
+              └────┬────┘                └─────────┘        └──────┬──────┘
+                   │                           ▲                   │
+              HOLDS_PRODUCT                    └───────────────────┘
                    │                              RECEIVED_BY
               ┌────▼────┐
-              │ Product  │
+              │ Product │
               └─────────┘
 
               ┌──────────┐  TRADES_WITH   ┌──────────┐
@@ -35,7 +35,7 @@ This model captures the Commercial Bank ecosystem: banked customers, unbanked en
 ### Node properties at a glance
 
 ```
-┌──────────────────────────────────────────────────────────────────────┐
+┌─────────────────────────────────────────────────────────────────────┐
 │  Customer                     │  Account           │  Transaction   │
 │  ─────────                    │  ─────────         │  ─────────     │
 │  customerId    STRING         │  accountId  STRING │  transactionId │
@@ -56,7 +56,7 @@ This model captures the Commercial Bank ecosystem: banked customers, unbanked en
 │  name          STRING         │  name       STRING                  │
 │  sector        STRING         │  pillar  lend|transact|invest|insure│
 │                               │  monthlyFee FLOAT                   │
-└──────────────────────────────────────────────────────────────────────┘
+└─────────────────────────────────────────────────────────────────────┘
 
   * Written back by GDS algorithms (requires AuraDB Professional+)
 ```
