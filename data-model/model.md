@@ -8,26 +8,26 @@ This model captures the Commercial Bank ecosystem: banked customers, unbanked en
 
 ```
                         ┌───────────┐
-                   ┌───▶│  Industry  │
+                   ┌───▶│  Industry │
                    │    └───────────┘
               BELONGS_TO
                    │
               ┌────┴────┐  HAS_ACCOUNT   ┌─────────┐  SENT   ┌─────────────┐
-              │ Customer │───────────────▶│ Account  │────────▶│ Transaction │
-              └────┬────┘                 └─────────┘         └──────┬──────┘
-                   │                           ▲                     │
-              HOLDS_PRODUCT                    └─────────────────────┘
+              │ Customer│───────────────▶│ Account │────────▶│ Transaction │
+              └────┬────┘                 └─────────┘        └──────┬──────┘
+                   │                           ▲                    │
+              HOLDS_PRODUCT                    └────────────────────┘
                    │                              RECEIVED_BY
               ┌────▼────┐
               │ Product  │
               └─────────┘
 
               ┌──────────┐  TRADES_WITH   ┌──────────┐
-              │ Customer │╌╌╌╌╌╌╌╌╌╌╌╌╌╌▶│ Customer │   (derived / aggregated)
+              │ Customer │╌╌╌╌╌╌╌╌╌╌╌╌╌╌▶ │ Customer │   (derived / aggregated)
               └──────────┘                └──────────┘
 
               ┌──────────┐ POTENTIAL_MATCH ┌──────────┐
-              │ Customer │┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄▶│ Customer │  (entity resolution)
+              │ Customer │┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄▶ │ Customer │  (entity resolution)
               │ (banked) │                 │(unbanked)│
               └──────────┘                 └──────────┘
 ```
