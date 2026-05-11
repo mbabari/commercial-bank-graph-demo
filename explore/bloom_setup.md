@@ -3,7 +3,7 @@
 ## How to Access
 
 1. Go to https://console.neo4j.io
-2. Open your **[MB] Commercial Bank Graph Demo** instance
+2. Open your ** Commercial Bank Graph Demo** Neo4j instance
 3. Click **Explore** (top nav, next to Query)
 
 ---
