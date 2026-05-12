@@ -1,0 +1,236 @@
+name,description,query,id,parentId,isFolder
+1- graph at a glance table,,"MATCH (n)
+WITH labels(n)[0] AS label, count(*) AS count
+RETURN label, count ORDER BY count DESC
+UNION ALL
+MATCH ()-[r]->()
+WITH type(r) AS label, count(*) AS count
+RETURN label, count ORDER BY count DESC;",0,,false
+2- Multi-hop ecosystem (GRAPH VIEW — swap customerId),,"MATCH path = (c:Customer {customerId: 'CUST-00001'})-[:TRADES_WITH*1..2]-(other:Customer)
+RETURN path
+LIMIT 200;
+",1,,false
+3 — Ecosystem size ranking — distinct entities within 2 hops (table),,"MATCH (c:Customer {status: 'banked'})-[:TRADES_WITH*1..2]-(other:Customer)
+WHERE c <> other
+WITH c, count(DISTINCT other) AS ecosystemSize
+RETURN c.name AS customer,
+       c.segment AS segment,
+       c.region AS region,
+       ecosystemSize
+ORDER BY ecosystemSize DESC
+LIMIT 20;
+",2,,false
+5 — Multi-payer unbanked conversion targets (table),,"MATCH (banked:Customer {status: 'banked'})-[tw:TRADES_WITH]->(unbanked:Customer {status: 'unbanked'})
+WITH unbanked,
+     collect(DISTINCT banked.name) AS payerNames,
+     sum(tw.amount) AS totalZAR
+WHERE size(payerNames) >= 3
+RETURN unbanked.name AS entity,
+       unbanked.region AS region,
+       size(payerNames) AS bankedPayers,
+       round(totalZAR) AS totalInboundZAR,
+       payerNames[0..5] AS samplePayers
+ORDER BY totalZAR DESC
+LIMIT 20;",3,,false
+"6 — Peer-based cross-sell (same industry, product peer holds, target does not)",,"MATCH (target:Customer {customerId: 'CUST-00001'})-[:BELONGS_TO]->(i:Industry)<-[:BELONGS_TO]-(peer:Customer)
+WHERE peer <> target AND peer.status = 'banked'
+MATCH (peer)-[:HOLDS_PRODUCT]->(p:Product)
+WHERE NOT (target)-[:HOLDS_PRODUCT]->(p)
+RETURN p.name AS product,
+       p.pillar AS pillar,
+       count(DISTINCT peer) AS peersWithProduct
+ORDER BY peersWithProduct DESC;",4,,false
+8 — Shortest trading path between two customers (table — may return 0 rows),,"MATCH path = shortestPath(
+  (a:Customer {customerId: 'CUST-00001'})-[:TRADES_WITH*]-(b:Customer {customerId: 'CUST-00010'})
+)
+RETURN path",5,,false
+9 -- Lifetime fan-out per source account,,"// Count distinct destinations across all transactions per source,
+// and total value sent out
+MATCH (source:Account)-[:SENT]->(t:Transaction)-[:RECEIVED_BY]->(dest:Account)
+WHERE source <> dest
+WITH source,
+     count(DISTINCT dest) AS lifetime_dests,
+     count(t)             AS total_tx,
+     sum(t.amount)        AS total_out
+WHERE lifetime_dests >= 4
+MATCH (cust:Customer)-[:HAS_ACCOUNT]->(source)
+RETURN cust.name                                      AS source_customer,
+       cust.riskScore                                 AS risk,
+       cust.segment                                   AS segment,
+       cust.region                                    AS region,
+       lifetime_dests                                 AS distinct_destinations,
+       total_tx                                       AS total_transactions,
+       round(total_out * 100) / 100                   AS total_sent,
+       round((total_out / lifetime_dests) * 100) / 100 AS avg_per_destination
+ORDER BY distinct_destinations DESC, total_sent DESC
+LIMIT 15",6,,false
+10 -- Fan-out → fan-in (the layering signature),,"// Source S sends to multiple intermediaries who all forward to the same final destination D
+MATCH (s:Account)-[:SENT]->(t1:Transaction)-[:RECEIVED_BY]->(mid:Account),
+      (mid)-[:SENT]->(t2:Transaction)-[:RECEIVED_BY]->(d:Account)
+WHERE s <> mid AND mid <> d AND s <> d
+  AND t1.date <= t2.date
+  AND duration.inDays(t1.date, t2.date).days <= 14
+WITH s, d,
+     collect(DISTINCT mid)  AS intermediaries,
+     sum(t1.amount)         AS total_via_path
+WHERE size(intermediaries) >= 3
+MATCH (custS:Customer)-[:HAS_ACCOUNT]->(s),
+      (custD:Customer)-[:HAS_ACCOUNT]->(d)
+RETURN custS.name                          AS source,
+       custS.riskScore                     AS source_risk,
+       custS.segment                       AS source_segment,
+       custD.name                          AS final_destination,
+       custD.riskScore                     AS dest_risk,
+       custD.segment                       AS dest_segment,
+       size(intermediaries)                AS num_intermediaries,
+       round(total_via_path * 100) / 100   AS total_routed
+ORDER BY num_intermediaries DESC, total_routed DESC
+LIMIT 15",7,,false
+Entity_resolution,,":auto
+MATCH (u:Customer {status: 'unbanked'})
+WITH u, replace(replace(u.name, '(', ''), ')', '') AS cleanName
+WITH u, reduce(term = '', w IN split(cleanName, ' ')[..2] | term + w + '~ ') AS fuzzyTerm
+CALL db.index.fulltext.queryNodes('customer_name_fulltext', trim(fuzzyTerm))
+YIELD node AS b, score AS ftScore
+WHERE b.status = 'banked' AND ftScore > 0.3
+CALL {
+  WITH u, b
+
+  // Signal 1 — Name similarity (Jaro-Winkler on lowercased names)
+  WITH u, b,
+       apoc.text.jaroWinklerDistance(toLower(u.name), toLower(b.name)) AS nameSim
+
+  // Signal 2 — Industry match
+  OPTIONAL MATCH (u)-[:BELONGS_TO]->(iu:Industry)
+  OPTIONAL MATCH (b)-[:BELONGS_TO]->(ib:Industry)
+  WITH u, b, nameSim,
+       CASE WHEN iu.sicCode = ib.sicCode THEN 1.0 ELSE 0.0 END AS industrySim
+
+  // Signal 3 — Region match
+  WITH u, b, nameSim, industrySim,
+       CASE WHEN u.region = b.region THEN 1.0 ELSE 0.0 END AS regionSim
+
+  // Signal 4 — Trading partner overlap (Jaccard on TRADES_WITH neighbours)
+  OPTIONAL MATCH (u)-[:TRADES_WITH]-(uPartner:Customer)
+  WITH u, b, nameSim, industrySim, regionSim,
+       collect(DISTINCT uPartner.customerId) AS uPartners
+  OPTIONAL MATCH (b)-[:TRADES_WITH]-(bPartner:Customer)
+  WITH u, b, nameSim, industrySim, regionSim, uPartners,
+       collect(DISTINCT bPartner.customerId) AS bPartners
+  WITH u, b, nameSim, industrySim, regionSim,
+       [x IN uPartners WHERE x IN bPartners] AS intersection,
+       apoc.coll.union(uPartners, bPartners) AS unionSet
+  WITH u, b, nameSim, industrySim, regionSim,
+       CASE WHEN size(unionSet) = 0 THEN 0.0
+            ELSE toFloat(size(intersection)) / size(unionSet)
+       END AS tradingSim
+
+  // Composite score
+  WITH u, b, nameSim, industrySim, regionSim, tradingSim,
+       (0.40 * nameSim +
+        0.20 * industrySim +
+        0.15 * regionSim +
+        0.25 * tradingSim) AS confidence
+
+  WHERE confidence >= 0.45
+
+  MERGE (b)-[m:POTENTIAL_MATCH]->(u)
+  SET m.confidence    = round(confidence, 4),
+      m.nameSim       = round(nameSim, 4),
+      m.industrySim   = industrySim,
+      m.regionSim     = regionSim,
+      m.tradingSim    = round(tradingSim, 4)
+} IN TRANSACTIONS OF 100 ROWS;",8,,false
+ER run results,,"MATCH (b:Customer)-[m:POTENTIAL_MATCH]->(u:Customer)
+RETURN count(m)                       AS totalMatches,
+       round(avg(m.confidence), 3)    AS avgConfidence,
+       round(min(m.confidence), 3)    AS minConfidence,
+       round(max(m.confidence), 3)    AS maxConfidence;",9,,false
+ER scoring,,"MATCH (b:Customer {customerId: 'CUST-AURA-ER-B001'})
+MATCH (u:Customer {customerId: 'UNB-AURA-ER-U001'})
+OPTIONAL MATCH (u)-[:BELONGS_TO]->(iu:Industry)
+OPTIONAL MATCH (b)-[:BELONGS_TO]->(ib:Industry)
+OPTIONAL MATCH (u)-[:TRADES_WITH]-(up:Customer)
+WITH b, u, iu, ib, collect(DISTINCT up.customerId) AS uPartners
+OPTIONAL MATCH (b)-[:TRADES_WITH]-(bp:Customer)
+WITH b, u, iu, ib, uPartners, collect(DISTINCT bp.customerId) AS bPartners
+WITH b, u,
+     apoc.text.jaroWinklerDistance(toLower(u.name), toLower(b.name)) AS nameSim,
+     CASE
+       WHEN iu IS NOT NULL AND ib IS NOT NULL AND iu.sicCode = ib.sicCode THEN 1.0
+       ELSE 0.0
+     END AS industrySim,
+     CASE WHEN u.region = b.region THEN 1.0 ELSE 0.0 END AS regionSim,
+     uPartners,
+     bPartners
+WITH b, u, nameSim, industrySim, regionSim,
+     [x IN uPartners WHERE x IN bPartners] AS intersection,
+     apoc.coll.union(uPartners, bPartners) AS unionSet
+WITH b, u, nameSim, industrySim, regionSim,
+     CASE WHEN size(unionSet) = 0 THEN 0.0
+          ELSE toFloat(size(intersection)) / size(unionSet)
+     END AS tradingSim
+WITH b, u, nameSim, industrySim, regionSim, tradingSim,
+     (0.40 * nameSim + 0.20 * industrySim + 0.15 * regionSim + 0.25 * tradingSim) AS confidence
+WHERE confidence >= 0.45
+MERGE (b)-[m:POTENTIAL_MATCH]->(u)
+SET m.confidence  = round(confidence, 4),
+    m.nameSim     = round(nameSim, 4),
+    m.industrySim = industrySim,
+    m.regionSim   = regionSim,
+    m.tradingSim  = round(tradingSim, 4)
+RETURN b.name AS bankedCustomer,
+       u.name AS unbankedEntity,
+       round(confidence, 4) AS confidence,
+       round(nameSim, 4) AS nameSimilarity,
+       tradingSim AS tradingOverlap;",10,,false
+ER scores by confidence,,"MATCH (b:Customer)-[m:POTENTIAL_MATCH]->(u:Customer)
+RETURN b.name AS bankedName,
+       u.name AS unbankedName,
+       m.confidence AS confidence,
+       m.nameSim AS nameSimilarity,
+       m.industrySim AS sameIndustry,
+       m.regionSim AS sameRegion,
+       m.tradingSim AS tradingOverlap
+ORDER BY m.confidence DESC
+LIMIT 50;",11,,false
+ER name similarity,,"MATCH (c:Customer)-[tw:TRADES_WITH]->(p:Customer)
+WHERE c.customerId IN ['CUST-AURA-ER-B001', 'UNB-AURA-ER-U001']
+RETURN c.customerId, p.customerId, tw.txCount;",12,,false
+ER trading overlap,,"MATCH (b:Customer {customerId: 'CUST-AURA-ER-B001'})
+MATCH (u:Customer {customerId: 'UNB-AURA-ER-U001'})
+OPTIONAL MATCH (u)-[:BELONGS_TO]->(iu:Industry)
+OPTIONAL MATCH (b)-[:BELONGS_TO]->(ib:Industry)
+OPTIONAL MATCH (u)-[:TRADES_WITH]-(up:Customer)
+WITH b, u, iu, ib, collect(DISTINCT up.customerId) AS uPartners
+OPTIONAL MATCH (b)-[:TRADES_WITH]-(bp:Customer)
+WITH b, u, iu, ib, uPartners, collect(DISTINCT bp.customerId) AS bPartners
+WITH b, u,
+     1.0 - apoc.text.jaroWinklerDistance(toLower(u.name), toLower(b.name)) AS nameSim,
+     CASE
+       WHEN iu IS NOT NULL AND ib IS NOT NULL AND iu.sicCode = ib.sicCode THEN 1.0
+       ELSE 0.0
+     END AS industrySim,
+     CASE WHEN u.region = b.region THEN 1.0 ELSE 0.0 END AS regionSim,
+     uPartners,
+     bPartners
+WITH b, u, nameSim, industrySim, regionSim,
+     [x IN uPartners WHERE x IN bPartners] AS intersection,
+     apoc.coll.union(uPartners, bPartners) AS unionSet
+WITH b, u, nameSim, industrySim, regionSim,
+     CASE WHEN size(unionSet) = 0 THEN 0.0
+          ELSE toFloat(size(intersection)) / size(unionSet)
+     END AS tradingSim
+WITH b, u, nameSim, industrySim, regionSim, tradingSim,
+     (0.40 * nameSim + 0.20 * industrySim + 0.15 * regionSim + 0.25 * tradingSim) AS confidence
+MERGE (b)-[m:POTENTIAL_MATCH]->(u)
+SET m.confidence  = round(confidence, 4),
+    m.nameSim     = round(nameSim, 4),
+    m.industrySim = industrySim,
+    m.regionSim   = regionSim,
+    m.tradingSim  = round(tradingSim, 4)
+RETURN b.name AS bankedCustomer,
+       u.name AS unbankedEntity,
+       round(confidence, 4) AS confidence,
+       round(nameSim, 4) AS nameSimilarity,
+       round(tradingSim, 4) AS tradingOverlap;",13,,false
