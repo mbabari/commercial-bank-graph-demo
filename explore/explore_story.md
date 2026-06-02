@@ -132,6 +132,8 @@ Run `cypher/06_entity_resolution.cypher` to create `POTENTIAL_MATCH` relationshi
 
 *[Screenshot placeholder: Matched pair with POTENTIAL_MATCH edge, showing shared trading partners in between]*
 
+<img width="702" height="679" alt="image" src="https://github.com/user-attachments/assets/cfa4009b-1abd-4fa1-9f08-202964a7779c" />
+
 ---
 
 ## Scene 6 — The Full Picture
