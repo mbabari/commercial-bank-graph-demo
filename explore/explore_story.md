@@ -100,7 +100,7 @@ Before starting, ensure:
 
 ---
 
-## Scene 6 — Entity Resolution: Finding Hidden Duplicates
+## Scene 5 — Entity Resolution: Finding Hidden Duplicates
 
 **Goal:** Demonstrate how graph-based entity resolution identifies unbanked entities that are actually existing banked customers operating under a different name.
 
@@ -134,7 +134,7 @@ Run `cypher/06_entity_resolution.cypher` to create `POTENTIAL_MATCH` relationshi
 
 ---
 
-## Scene 7 — The Full Picture
+## Scene 6 — The Full Picture
 
 **Goal:** Summarise the value demonstrated.
 
