@@ -100,39 +100,11 @@ Before starting, ensure:
 
 ---
 
-## Scene 5 — Community Structure and Industry Clusters
-
-**Goal:** Use GDS-enriched properties to visualise the community landscape.
-
-### Steps
-
-1. Clear the canvas or start a new scene.
-2. Run a Cypher search in Explore to pull a community:
-   ```
-   MATCH (c:Customer)
-   WHERE c.communityId = 3
-   RETURN c LIMIT 50
-   ```
-3. Expand all TRADES_WITH relationships within this group.
-4. **Colour** nodes by `communityId` to see if sub-clusters emerge.
-5. **Size** nodes by `betweenness` — the largest nodes are brokers connecting different parts of the ecosystem.
-
-### Highlight the Broker
-
-6. Click the node with the highest betweenness centrality.
-7. Inspect its properties: this entity bridges multiple trading communities.
-
-> **Talking point:** "Community 3 contains 42 entities — mostly in Manufacturing and Transport. The node with the highest betweenness is *Midrand Engineering*, which trades with companies in both communities 3 and 7. If Midrand Engineering churns, it would fragment connectivity between these clusters. This insight is valuable for credit risk and relationship management."
-
-*[Screenshot placeholder: Community graph with nodes coloured by communityId, sized by betweenness, showing a clear broker node]*
-
----
-
 ## Scene 6 — Entity Resolution: Finding Hidden Duplicates
 
 **Goal:** Demonstrate how graph-based entity resolution identifies unbanked entities that are actually existing banked customers operating under a different name.
 
-### Prerequisites
+### Prerequisites (Done for you)
 
 Run `cypher/06_entity_resolution.cypher` to create `POTENTIAL_MATCH` relationships.
 
