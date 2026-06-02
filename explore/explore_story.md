@@ -57,27 +57,10 @@ Before starting, ensure:
 
 *[Screenshot placeholder: Canvas showing central customer with green and orange satellite nodes, relationship lines of varying thickness]*
 
----
-
-## Scene 3 — Identify a High-Value Unbanked Target
-
-**Goal:** Zoom in on the most promising unbanked entity.
-
-### Steps
-
-1. **Click the largest orange node** to inspect its properties.
-   - Note the `pageRank` score (high = influential in the network).
-   - Note the `communityId` (which cluster it belongs to).
-2. Look at the TRADES_WITH relationship properties in the panel:
-   - `amount` — total ZAR traded
-   - `txCount` — number of transactions
-   - `avgInterval` — average days between payments (regularity)
-
-> **Talking point:** "This unbanked entity — let's call it *Sandton Logistics* — receives R12M across 47 transactions from this customer alone. And it's got a high PageRank, meaning many other entities also trade with it. This is a prime onboarding target."
 
 ---
 
-## Scene 4 — Expand the Unbanked Entity's Full Ecosystem
+## Scene 3 — Expand the Unbanked Entity's Full Ecosystem
 
 **Goal:** Understand the full trading network of the unbanked target.
 
@@ -99,7 +82,7 @@ Before starting, ensure:
 
 ---
 
-## Scene 5 — Cross-Sell Opportunity within the Cluster
+## Scene 4 — Cross-Sell Opportunity within the Cluster
 
 **Goal:** Identify products that peer customers hold but this customer's cluster does not.
 
@@ -117,7 +100,7 @@ Before starting, ensure:
 
 ---
 
-## Scene 6 — Community Structure and Industry Clusters
+## Scene 5 — Community Structure and Industry Clusters
 
 **Goal:** Use GDS-enriched properties to visualise the community landscape.
 
@@ -145,7 +128,7 @@ Before starting, ensure:
 
 ---
 
-## Scene 7 — Entity Resolution: Finding Hidden Duplicates
+## Scene 6 — Entity Resolution: Finding Hidden Duplicates
 
 **Goal:** Demonstrate how graph-based entity resolution identifies unbanked entities that are actually existing banked customers operating under a different name.
 
@@ -179,7 +162,7 @@ Run `cypher/06_entity_resolution.cypher` to create `POTENTIAL_MATCH` relationshi
 
 ---
 
-## Scene 8 — The Full Picture
+## Scene 7 — The Full Picture
 
 **Goal:** Summarise the value demonstrated.
 
